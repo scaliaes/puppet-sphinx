@@ -17,6 +17,7 @@ class sphinx (
 
   class { 'sphinx::service':
     service_name => $service_name,
+    activate_service => $sphinx::params::sphinx_activate_service
   }
 
 }

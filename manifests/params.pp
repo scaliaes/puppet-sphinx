@@ -6,15 +6,15 @@ class sphinx::params {
 
   case $::osfamily {
     'RedHat': {
-      $sphinx_package_name   = 'sphinx'
-      $sphinx_service_name   = 'searchd'
-      $sphinx_enable_service = false
+      $sphinx_package_name     = 'sphinx'
+      $sphinx_service_name     = 'searchd'
+      $sphinx_activate_service = false
     }
 
     'Debian': {
-      $sphinx_package_name   = 'sphinxsearch'
-      $sphinx_service_name   = 'sphinxsearch'
-      $sphinx_enable_service = true
+      $sphinx_package_name     = 'sphinxsearch'
+      $sphinx_service_name     = 'sphinxsearch'
+      $sphinx_activate_service = true
     }
 
     default: {
