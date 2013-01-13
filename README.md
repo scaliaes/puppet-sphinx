@@ -13,7 +13,7 @@ Clone this repo to your Puppet modules directory
 Add the following to your site manifest:
 
     class { 'sphinx':
-      config_file => 'sphinx/sphinx.conf.erb',
+      config_file => 'puppet:///modules/scaliadev/sphinx/project.sphinx.conf',
     }
 
 ## Contributing
