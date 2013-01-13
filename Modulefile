@@ -1,0 +1,8 @@
+name    'puppet-sphinx'
+version '0.0.1'
+source 'http://github.com/scalia/puppet-sphinx'
+author 'scalia'
+license 'Apache License Version 2.0'
+summary 'Puppet Sphinx management module'
+description 'This module can be used for basic Sphinx Management'
+project_page 'http://github.com/scalia/puppet-sphinx'
