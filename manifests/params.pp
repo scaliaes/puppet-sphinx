@@ -9,12 +9,14 @@ class sphinx::params {
       $sphinx_package_name     = 'sphinx'
       $sphinx_service_name     = 'searchd'
       $sphinx_activate_service = false
+      $sphinx_config_file_path = '/etc/sphinx/sphinx.conf'
     }
 
     'Debian': {
       $sphinx_package_name     = 'sphinxsearch'
       $sphinx_service_name     = 'sphinxsearch'
       $sphinx_activate_service = true
+      $sphinx_config_file_path = '/etc/sphinxsearch/sphinx.conf'
     }
 
     default: {
