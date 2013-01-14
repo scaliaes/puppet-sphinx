@@ -5,6 +5,8 @@ class sphinx (
   $config_file    = undef,
 ) inherits sphinx::params {
 
+  anchor {'sphinx_first':} -> Class['sphinx::package']
+
   class { 'sphinx::package':
     package_name   => $package_name,
     package_ensure => $package_ensure,
@@ -23,4 +25,5 @@ class sphinx (
     service_name => $service_name,
   }
 
+  Class['sphinx::service'] -> anchor {'sphinx_last':}
 }
