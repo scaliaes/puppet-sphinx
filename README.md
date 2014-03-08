@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/scalia/puppet-sphinx.png?label=ready&title=Ready)](https://waffle.io/scalia/puppet-sphinx)
 # Sphinx module for Puppet
 
 This module manages sphinx on Linux (RedHat/Debian) distros.
