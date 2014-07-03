@@ -1,5 +1,13 @@
-class sphinx::config($activate_service, $config_file_source, $config_file_path)
-{
+class sphinx::config(
+  $activate_service, 
+  $config_file_source, 
+  $config_file_path
+) {
+
+  validate_bool($activate_service)
+  validate_absolute_path($config_file_path)
+  if $config_file_source { validate_re($config_file_source, '^puppet:.$') }
+  
   if $activate_service {
     exec { 'activate_sphinx':
       command => 'sed -i "s/START=no/START=yes/g" /etc/default/sphinxsearch',
